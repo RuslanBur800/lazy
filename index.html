@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <li>Ископаемые остатки доисторических собак найдены в человеческих пещерах по всему миру.
+
+        Ранее на основании археологических находок чаще всего учёными назывались даты одомашнивания собак 13—15 тыс. лет до н. э.[30]
+        
+        Сейчас ряд исследователей считает, что собаку приручили ещё в начале верхнего палеолита представители ориньякской культуры.
+        
+        Так, палеонтологи Королевского музея естествознания[fr] Бельгии во главе с Митье Жермонпре (Mietje Germonpré) указывают дату 31,7—36,5 тыс. лет до н. э. Эти выводы сделаны на основании последних находок, остатков доисторической собаки в пещере Гойе (Goyet). Примечательно, что строение черепа доисторических собак значительно отличается от доисторических волков.
+        
+    </li>
+    <img class = 'blur' src="output(3).jpg" data-src="jpg.jpg" alt="">
+    <img class = 'blur' src="output-onlineimagetools (5).jpg" data-src="13483wvuHkldUJTDsxIYV.jpg" alt="">
+    <img class = 'blur' src="output(2).jpg" data-src="fonstola.ru_142000_1920x1200.jpg" alt="">
+    <img class = 'blur' src="output-(4).jpg" data-src="locs.jpg" alt="">
+    <img class = 'blur' src="output-onlineimagetools (1).jpg" data-src="8286.jpg" alt="">
+
+</body>
+<script>
+
+    const visible = function(element) {
+            return element.getBoundingClientRect().top < (window.innerHeight - 150)
+        }
+    
+const lazyload = function() {
+    let imgs = document.querySelectorAll('img');
+    for (let i = 0; i < imgs.length; i++) {
+        if (visible(imgs[i])) {
+           let path = imgs[i].getAttribute('data-src')
+           imgs[i].setAttribute('src',path);
+        }
+    }
+}
+document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('scroll', lazyload)
+})
+
+
+</script>
+</html>
